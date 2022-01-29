@@ -20,7 +20,7 @@ import javax.mail.internet.MimeMultipart;
 public class SendMail {
 
 	public void sendMail(String toUser, String subject, String bodyText){
-		String host="172.0.0.0";//Set host  
+		String host=new User().loadProperties().getProperty("HOST_IP");//Set host  
 		  final String user=new User().loadProperties().getProperty("USER");//change accordingly in the constants.properties file
 		  final String password=new User().loadProperties().getProperty("PASSWORD");//change accordingly in the constants.properties file 
 		    
